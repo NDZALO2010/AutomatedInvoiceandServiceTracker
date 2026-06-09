@@ -1,5 +1,36 @@
 # Backend (FastAPI)
 
+## Technology Stack
+
+### Framework & Server
+- **FastAPI 0.115.0**: Modern, fast Python web framework with automatic OpenAPI documentation
+- **Uvicorn 0.30.0**: ASGI server for async request handling
+
+### Database & ORM
+- **SQLAlchemy 2.0.31**: Powerful ORM for database abstraction and query building
+- **Alembic 1.13.2**: Database migration tool for schema versioning
+- **PostgreSQL**: Primary production database
+- **psycopg2-binary 2.9.9**: PostgreSQL database adapter
+
+### Authentication & Security
+- **python-jose 3.3.0** + **cryptography**: JWT token generation and validation
+- **Passlib 1.7.4** + **bcrypt<5**: Secure password hashing and verification
+- **python-multipart 0.0.9**: Multipart form data handling
+
+### Validation & Configuration
+- **Pydantic 2.3.4**: Request/response schema validation
+- **Pydantic Settings 2.3.4**: Environment configuration management
+- **email-validator 2.2.0**: Email format validation
+
+### Automation & Communication
+- **APScheduler 3.10.4**: Task scheduling for overdue invoice detection
+- **smtplib** (built-in): Email dispatch for notifications
+
+### Testing & Quality
+- **pytest 8.2.2**: Unit and integration testing framework
+- **pytest-asyncio 0.23.8**: Async test support
+- **httpx 0.27.0**: Async HTTP client for API testing
+
 ## Run locally
 
 1. Create and activate a virtual environment.

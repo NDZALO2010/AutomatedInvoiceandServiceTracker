@@ -6,6 +6,8 @@
   --accent: #0f766e;
   --accent-2: #115e59;
   --danger: #b91c1c;
+  --success: #16a34a;
+  --warning: #ea580c;
 }
 
 * {
@@ -99,9 +101,208 @@ input {
   color: var(--danger);
 }
 
+/* Dashboard Styles */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f0fdf4 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dashboard-card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-card-value {
+  margin: 0.5rem 0 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dashboard-card-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.dashboard-card--danger {
+  background: linear-gradient(135deg, #fef2f2 0%, #fef2f2 100%);
+  border-color: #fecaca;
+}
+
+.dashboard-card--danger h3 {
+  color: #7f1d1d;
+}
+
+.dashboard-card--success {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f0fdf4 100%);
+  border-color: #86efac;
+}
+
+.dashboard-card--success h3 {
+  color: #15803d;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.dashboard-table th {
+  background-color: #f1f5f9;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #cbd5e1;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.dashboard-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.table-row--danger {
+  background-color: #fef2f2;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.monospace {
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-paid {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-unpaid {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-overdue {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-inactive {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.danger-text {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.client-info {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.client-info p {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.client-info p:last-child {
+  border-bottom: none;
+}
+
+.services-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.service-item {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-item h4 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.service-item p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 700px) {
   .topbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-table {
+    font-size: 0.9rem;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 0.5rem;
+  }
+
+  .dashboard-card-value {
+    font-size: 1.5rem;
   }
 }
